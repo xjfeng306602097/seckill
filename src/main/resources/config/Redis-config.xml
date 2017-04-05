@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:redis="http://www.springframework.org/schema/redis"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/redis http://www.springframework.org/schema/redis/spring-redis-1.0.xsd">
+
+	<!-- jedis配置 -->
+	<bean name="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxIdle" value="${redis.maxIdle}" /><!-- 最大空闲数 -->
+		<property name="maxWaitMillis" value="${redis.maxWait}" /><!-- 
+			最大连接数 -->
+		<property name="testOnBorrow" value="${redis.testOnBorrow}" /><!-- 
+			使用连接时，判断连接是否成功 -->
+	</bean>
+
+	<!-- redis服务中心 -->
+	<bean name="connectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+		<property name="hostName" value="${redis.host}"></property>
+		<property name="port" value="${redis.port}"></property>
+		<!-- <property name="password" value="${redis.password}"></property> -->
+		<property name="timeout" value="${redis.timeout}"></property>
+		<property name="poolConfig" ref="poolConfig"></property>
+	</bean>
+
+	<!-- redisTemplate -->
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory" ref="connectionFactory"></property>
+		<!-- 指定redis key的序列化api -->
+		<property name="keySerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>
+		<!-- 指定redis value的序列化api -->
+		<property name="valueSerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+	</bean>
+
+	<!-- 超时缓存实现实例 -->
+	<bean name="redisCacheService" class="com.xiao.dao.cache.RedisCacheServiceImpl">
+		<property name="timeout" value="${redis.cacheTimeOut}"></property><!-- 指定超时缓存的时间 -->
+	</bean>
+
+	<!-- 自动扫描上下文中的advisor类 -->
+	<bean
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />
+
+	<!-- 方法拦截器 -->
+	<bean id="MethodCacheInterceptor" class="com.xiao.dao.cache.MethodCacheInterceptor" />
+
+	<!-- 配置aop切入点及通知类 -->
+	<bean id="methodCachePointCut"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="advice" ref="MethodCacheInterceptor" />
+		<property name="pattern" value=".*Service.*ById" /><!-- ServiceImpl以ById的方法 -->
+	</bean>
+
+</beans>
