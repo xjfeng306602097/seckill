@@ -1,5 +1,7 @@
 var Gallery = function(container, className, data){
+	this.galleryId = data.seckillId;
 	this.init(container, data);
+	this.renderGalryInfo();
 };
 
 Gallery.prototype = {
@@ -30,5 +32,23 @@ Gallery.prototype = {
 		this.clearfix = document.createElement("div");
 		this.clearfix.className = "clearfix";
 		this.galleryInfo.appendChild(this.clearfix);
+	},
+	renderGalryInfo : function(){
+		this.galryInfo = document.createElement("div");
+		this.galryInfo.className = "galy-info";
+		this.div.appendChild(this.galryInfo);
+		this.galry = document.createElement("div");
+		this.galry.className = "galry";
+		this.galryInfo.appendChild(this.galry);
+		this.prices = document.createElement("div");
+		this.prices.className = "prices";
+		this.prices.innerHTML = '<h5 class="item_price">' + this.data.price + '</h5>';
+		this.galry.appendChild(this.prices);
+		this.rating = document.createElement("div");
+		this.rating.className = "rating";
+		this.rating.innerHTML = '<span>☆</span> <span>☆</span> <span>☆</span> <span>☆</span> <span>☆</span>';
+		this.clearfix = document.createElement("div");
+		this.clearfix.className = "clearfix";
+		this.galry.appendChild(this.clearfix);
 	}
 };
