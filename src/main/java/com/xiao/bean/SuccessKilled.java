@@ -13,6 +13,8 @@ import java.util.Date;
  */
 public class SuccessKilled implements Serializable{
 
+	private static final long serialVersionUID = -2645728694285575925L;
+
 	private long seckillId;
 
 	private long userPhone;
