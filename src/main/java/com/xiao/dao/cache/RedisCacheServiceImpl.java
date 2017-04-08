@@ -131,6 +131,7 @@ public class RedisCacheServiceImpl implements RedisCacheService {
 		return timeout;
 	}
 
+	@SuppressWarnings("static-access")
 	public void setTimeout(int timeout) {
 		this.timeout = timeout;
 	}
