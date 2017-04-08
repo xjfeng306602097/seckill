@@ -9,9 +9,6 @@
 <link rel="stylesheet"
 	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 <style type="text/css">
-ul {
-	list-style: none;
-}
 
 hr {
 	width: 60%;
@@ -52,7 +49,6 @@ hr {
 						<div class="row dropDownPanel_Big" align="center">
 							<div class="col-sm-3">
 								<h4>By Relation</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Friend</a></li>
 									<li><a class="list" href="products.html">Lover</a></li>
@@ -64,7 +60,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>By Flavour</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Chocolate</a></li>
 									<li><a class="list" href="products.html">Mixed Fruit</a></li>
@@ -76,7 +71,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>By Theme</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Heart shaped</a></li>
 									<li><a class="list" href="products.html">Cartoon Cakes</a></li>
@@ -89,7 +83,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>Weight</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">1 kG</a></li>
 									<li><a class="list" href="products.html">1.5 kG</a></li>
@@ -108,7 +101,6 @@ hr {
 						<div class="row dropDownPanel_Big" align="center">
 							<div class="col-sm-3">
 								<h4>By Relation</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Friend</a></li>
 									<li><a class="list" href="products.html">Lover</a></li>
@@ -120,7 +112,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>By Flavour</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Chocolate</a></li>
 									<li><a class="list" href="products.html">Mixed Fruit</a></li>
@@ -132,7 +123,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>By Theme</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Heart shaped</a></li>
 									<li><a class="list" href="products.html">Cartoon Cakes</a></li>
@@ -145,7 +135,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>Weight</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">1 kG</a></li>
 									<li><a class="list" href="products.html">1.5 kG</a></li>
@@ -165,7 +154,6 @@ hr {
 						<div class="row dropDownPanel_Big" align="center">
 							<div class="col-sm-3">
 								<h4>By Relation</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Friend</a></li>
 									<li><a class="list" href="products.html">Lover</a></li>
@@ -177,7 +165,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>By Flavour</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Chocolate</a></li>
 									<li><a class="list" href="products.html">Mixed Fruit</a></li>
@@ -189,7 +176,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>By Theme</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Heart shaped</a></li>
 									<li><a class="list" href="products.html">Cartoon Cakes</a></li>
@@ -202,7 +188,6 @@ hr {
 							</div>
 							<div class="col-sm-3">
 								<h4>Weight</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">1 kG</a></li>
 									<li><a class="list" href="products.html">1.5 kG</a></li>
@@ -221,7 +206,6 @@ hr {
 						<div class="row dropDownPanel_Mid" align="center">
 							<div class="col-sm-4">
 								<h4>By Relation</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Friend</a></li>
 									<li><a class="list" href="products.html">Lover</a></li>
@@ -233,7 +217,6 @@ hr {
 							</div>
 							<div class="col-sm-4">
 								<h4>By Flavour</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Chocolate</a></li>
 									<li><a class="list" href="products.html">Mixed Fruit</a></li>
@@ -245,7 +228,6 @@ hr {
 							</div>
 							<div class="col-sm-4">
 								<h4>Specials</h4>
-								<hr noshade="noshade">
 								<ul class="multi-column-dropdown" align="left">
 									<li><a class="list" href="products.html">Ice cream
 											cake</a></li>
@@ -275,7 +257,8 @@ hr {
 						<li>
 							<div class="row">
 								<div class="col-md-12">
-									<span class="glyphicon glyphicon-user" style="padding-bottom: 5px"></span>
+									<span class="glyphicon glyphicon-user"
+										style="padding-bottom: 5px"></span>
 									<form class="form" role="form" method="post" action="login"
 										accept-charset="UTF-8" id="login-nav">
 										<div class="form-group">

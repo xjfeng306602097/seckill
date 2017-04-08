@@ -44,6 +44,8 @@ Carousel.prototype = {
 			submit.setAttribute("href", this.data[a].seckillId + '/detail');
 			var img = document.createElement("img");
 			img.seckillId = this.data[a].seckillId;
+			img.className = "img-responsive";
+			img.style.height = '500px';
 			img.setAttribute("src", this.data[a].picture);
 			// img.addEventListener("click", this.getDetails, false);
 			item.appendChild(submit);
